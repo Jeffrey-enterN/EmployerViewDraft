@@ -97,122 +97,18 @@
 </head>
 <body>
 
-    <h2>Your enterN Profile | Let's Give Employers Something to See</h2>
+    <h2>Here's a Potential Match</h2>
 
     <form>
         <table>
-            <!-- Section 1: Basic Info -->
-            <tr>
-                <th colspan="2">Personal & Contact Info</th>
-            </tr>
-            <tr>
-                <td>First Name:</td>
-                <td><input type="text" name="first_name" required></td>
-            </tr>
-            <tr>
-                <td>Last Name:</td>
-                <td><input type="text" name="last_name" required></td>
-            </tr>
-            <tr>
-                <td>School Email (if different from your login email):</td>
-                <td><input type="email" name="email" required></td>
-            </tr>
-              <tr>
-                <td>If matched, may we share your email with employers?</td>
-                <td class="checkbox-container">
-                    <input type="checkbox" name="email_consent"> Yes
-                </td>
-            </tr>
-            <tr>
-                <td>Mobile Number:</td>
-                <td><input type="tel" name="mobile" required></td>
-            </tr>
-            <tr>
-                <td>May we send SMS Notifications:</td>
-                <td class="checkbox-container">
-                    <input type="checkbox" name="sms_consent"> Yes
-                </td>
-            </tr>
-                 <tr>
-                <td>If matched, may we share your number with employers?</td>
-                <td class="checkbox-container">
-                    <input type="checkbox" name="sms_consent"> Yes
-                </td>
-            </tr>
-            
-            <!-- Section 2: Summary -->
-            <tr>
                 <th colspan="2">Your Summary</th>
             </tr>
             <tr>
-                <td>Share a paragraph about YOU!</td>
+                <td>Summary:</td>
                 <td><textarea name="about_me" rows="4" placeholder="Briefly describe yourself and avoid using any identifying information or gendered pronouns to maintain the anonymity of the enterN profiles..."></textarea></td>
             </tr>
-
-            <!-- Section 3: Education -->
-            <tr>
-                <th colspan="2">School & Major</th>
-            </tr>
-            <tr>
-                <td>What college do you attend?</td>
-                <td><input type="text" name="college"></td>
-            </tr>
-            <tr>
-                <td>What's your major?</td>
+                <td>Major</td>
                 <td><input type="text" name="major"></td>
-            </tr>
-            <tr>
-                <td>What level of degree are you getting?</td>
-                <td>
-                    <select name="industries" multiple>
-                        <option value="2yr">Associate (2-Year)</option>
-                        <option value="4yr">Bachelor (4-Year)</option>
-                        <option value="mstr">Master/MBA</option>
-                        <option value="doctorate">Doctorate</option>
-                        <option value="jd">Juris Doctor</option>
-                        <option value="md">M.D.</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <small>Hold Ctrl (Cmd on Mac) to select multiple.</small>
-                </td>
-            </tr>
-
-            <!-- Section 4: Career Interests -->
-            <tr>
-                <th colspan="2">Industry & Location Preferences</th>
-            </tr>
-            <tr>
-                <td>Industries of Interest</td>
-                <td>
-                    <select name="industries" multiple>
-                        <option value="11">Agriculture, Forestry, Fishing & Hunting</option>
-                        <option value="21">Mining, Quarrying, Oil & Gas</option>
-                        <option value="22">Utilities</option>
-                        <option value="23">Construction</option>
-                        <option value="31">Manufacturing</option>
-                        <option value="41">Wholesale Trade</option>
-                        <option value="44">Retail Trade</option>
-                        <option value="48">Transportation & Warehousing</option>
-                        <option value="51">Information</option>
-                        <option value="52">Finance & Insurance</option>
-                        <option value="53">Real Estate, Renting & Leasing</option>
-                        <option value="54">Professional, Scientific & Technical Services</option>
-                        <option value="55">Management of Companies & Enterprises</option>
-                        <option value="56a">Administrative Support</option>
-                        <option value="56b">Waste Management & Remediation</option>
-                        <option value="61">Educational Services</option>
-                        <option value="62">Health Care & Social Assistance</option>
-                        <option value="71">Arts, Entertainment & Recreation</option>
-                        <option value="72">Accommodation & Food Services</option>
-                        <option value="81">Public Administration</option>
-                        <option value="99">Other</option>
-                    </select>
-                    <small>Hold Ctrl (Cmd on Mac) to select multiple.</small>
-                </td>
-            </tr>
-            <tr>
-                <td>Preferences for Work Location</td>
-                <td><input type="text" name="locations" placeholder="Enter City, State or Regions"></td>
             </tr>
         </table>
     </form>
@@ -221,15 +117,51 @@
 <br>    
 <div class="form-container">
  <h1>Part 6: Your Preferences</h1>
-    <h2>Work, Organization & Leadership Preferences</h2>
-    <p>The following exercise will have several sliders.</p>
-    <p>Use the sliders to indicate where in the range you feel best reflects your choice of the two styles.</p>
-    <p>There are no right or wrong responses.</p>
-
-
+    <!-- Averages -->
+    <h3>Aggregate Averages</h3>
+    <p>Mission & Vision</p>
+<div class="slider-container">
+    <label>
+        <span class="left-label" data-tooltip="An organization with a mission-driven approach to business.">←Social & Mission</span>
+          <input type="range" min="0" max="100" value="50" class="slider">
+        <span class="right-label" data-tooltip="An organization that focuses on profit and creating shareholder value.">Profit & Advancement→</span>
+    </label>
+</div>
+    <p>Work Style</p>
+<div class="slider-container">
+    <label>
+        <span class="left-label" data-tooltip="An organization that values innovation and creativity.">←Focused Specialist</span>
+          <input type="range" min="0" max="100" value="50" class="slider">
+        <span class="right-label" data-tooltip="An organization that values tried and true methods.">Collaborative Generalist→</span>
+    </label>
+</div>
+        <p>Preferred Supervisor Style</p>
+<div class="slider-container">
+    <label>
+        <span class="left-label" data-tooltip="Values building diverse, inclusive teams.">←Transparent Taskmaster</span>
+          <input type="range" min="0" max="100" value="50" class="slider">
+        <span class="right-label" data-tooltip="Values building high-performing teams without a focus on diversity.">Hands-Off & Ambiguous→</span>
+    </label>
+</div>
+    <p>Work Environment</p>
+<div class="slider-container">
+    
+    <label>
+        <span class="left-label" data-tooltip="">←Distraction-Free Solitude</span>
+          <input type="range" min="0" max="100" value="50" class="slider">
+        <span class="right-label" data-tooltip="">Social & Collaborative→</span>
+    </label>
+</div>
+    <p>Collaboration Style</p>
+<div class="slider-container">
+    <label>
+        <span class="left-label" data-tooltip="">←Structured</span>
+          <input type="range" min="0" max="100" value="50" class="slider">
+        <span class="right-label" data-tooltip="">Fluid→</span>
+    </label>
+<br>
     <!-- Mission & Vision Fit -->
 <h3>Mission & Vision</h3>
-<p>Move the slider to the position that best reflects your preferences on the mission, vision, and values of the organization you wish to work for.</p>    
 <div class="slider-container">
     <label>
         <span class="left-label" data-tooltip="An organization with a mission-driven approach to business.">←Purpose-Driven Impact</span>
@@ -266,7 +198,6 @@
     
     <!-- Work Style -->
 <h3>Work Style Preferences</h3>
-<p>Move the slider to the position that best reflects your preferences on your own working style.</p>    
 <br>
 <div class="slider-container">
     <label>
@@ -312,7 +243,6 @@
     
     <!-- Management & Leadership Style -->
 <h3>Preferred Style for Supervisor</h3>
-<p>Move the slider to the position that best reflects your preferences on your direct supervisor's management style.</p>    
 <div class="slider-container">
     <label>
         <span class="left-label" data-tooltip="">←Strict Adherence to Policies</span>
@@ -355,7 +285,6 @@
     
     <!-- Work Environment -->
 <h3>Preferred Work Environment</h3>
-<p>Move the slider to the position that best reflects your preferences for the environment you will work in.</p>    
 <div class="slider-container">
     <label>
         <span class="left-label" data-tooltip="">←Deep Focus</span>
@@ -398,7 +327,6 @@
     
     <!-- Communication & Collaboration -->
 <h3>Preferred Collaboration Styles</h3>
-<p>Move the slider to the position that best reflects your preferences on how you collaborate with your team.</p>    
 <div class="slider-container">
     <label>
         <span class="left-label" data-tooltip="">←Defined Roles</span>
